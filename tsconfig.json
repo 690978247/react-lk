@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "baseUrl": "./", // 解析非相对模块的基地址，默认是当前目录
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@/*": ["src/*"]  //解决引入报错  找不到模块“@/xxxx” 或其相应的类型声明
+    },
+
+  },
+  "include": ["src/**/*", "src/**/*.vue", "src/utils/*.ts", "types/*.d.ts"],
+  // "references": [{ "path": "./tsconfig.node.json" }]
+}
